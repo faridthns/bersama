@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: lato;
+    src: url("../font/Lato-Regular.ttf");
+}
+
+*{
+    font-family: 'lato', sans-serif;
+
+}
+
+body {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body-dashboard-main{
+    background-image: url(../image/homebg.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
