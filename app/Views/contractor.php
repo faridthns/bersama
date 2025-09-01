@@ -26,7 +26,7 @@
             <div class="hidden md:block">
                 <ul class="flex gap-6 text-lg text-black">
                     <li>
-                        <a href="#tentangkami" class="hover:text-red-700">Home</a>
+                        <a href="#tentangkami" class="hover:text-red-700">Homeless</a>
                     </li>
                     <li>
                         <a href="#layanankami" class="hover:text-red-700">Produk Layanan</a>
