@@ -4,6 +4,10 @@
     font-family: lato;
     src: url("../font/Lato-Regular.ttf");
 }
+@font-face {
+    font-family: playfull;
+    src: url("../font/Playfull\ Rocket.ttf");
+}
 
 @font-face {
     font-family: heavitas;
@@ -21,6 +25,14 @@
 
 #contractor {
     font-family: 'heavitas', sans-serif;
+}
+
+ul > li > a{
+    font-family: 'playfull', sans-serif;
+}
+
+.playfull{
+    font-family: 'playfull' , sans-serif;
 }
 
 body {
