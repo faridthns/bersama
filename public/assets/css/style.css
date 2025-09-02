@@ -4,10 +4,22 @@
     font-family: lato;
     src: url("../font/Lato-Regular.ttf");
 }
+@font-face {
+    font-family: playfull;
+    src: url("../font/Playfull\ Rocket.ttf");
+}
 
 *{
     font-family: 'lato', sans-serif;
 
+}
+
+ul > li > a{
+    font-family: 'playfull', sans-serif;
+}
+
+.playfull{
+    font-family: 'playfull' , sans-serif;
 }
 
 body {
