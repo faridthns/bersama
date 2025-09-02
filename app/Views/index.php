@@ -23,18 +23,18 @@
 
     <section class="flex justify-center flex-col items-center h-[80vh]">
         <div class="pt-8 text-center">
-            <h1 class="text-3xl">Lorem ipsum dolor sit amet</h1>
-            <h3 class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, doloribus.</h1>
+            <h1 class="text-3xl text-[#0096FF]">Lorem ipsum dolor sit amet</h1>
+            <h3 class="pt-3 text-[#FFE607]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, doloribus.</h1>
         </div>
         <div class="flex justify-center my-12 gap-2">
-            <div class="advertising text-center border-2 rounded-lg p-6 w-fit">
-                <h4>Lorem ipsum dolor sit amet </h4>
+            <div class="advertising text-center border-4 border-red-700 rounded-lg py-6 w-[265px]">
+                <h4>Dunia Advertising</h4>
                 <a href="<?= base_url('advertising')?>">
                     <button class="mt-4 px-4 py-2 bg-red-700 text-white rounded">See Dashboard</button>
                 </a>
             </div>
-            <div class="contractor text-center border-2 rounded-lg p-6 gap-3 w-fit">
-                <h4>Lorem ipsum dolor sit amet </h4>
+            <div class="contractor text-center border-4 border-red-700 rounded-lg py-6 gap-3 w-[265px]">
+                <h4>Bintara Jaya Persada</h4>
                 <a href="<?= base_url('contractor')?>">
                     <button class="mt-4 px-4 py-2 bg-red-700 text-white rounded">See Dashboard</button>
                 </a>
