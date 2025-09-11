@@ -14,7 +14,11 @@
 
 </head>
 
+<<<<<<< Updated upstream
 <body>
+=======
+<body id="advertising">
+>>>>>>> Stashed changes
     <header>
         <nav class="fixed top-0 w-full bg-white shadow z-50 h-fit flex items-center justify-between px-6 py-2">
             <!-- Logo -->
@@ -89,7 +93,7 @@
             <div class="text-center lg:w-[45vw] w-[80vw] mx-auto">
                 <h1 class="text-3xl font-bold playfull">Solusi Periklanan Berbasis Data</h1>
                 <h1 class="text-3xl font-bold playfull">untuk Pertumbuhan yang Terukur</h1>
-                <p class="text-1xl mt-5">Kami merancang dan mengeksekusi kampanye yang didukung oleh analisis mendalam, memastikan setiap investasi pemasaran menghasilkan pengembalian yang optimal bagi bisnis Anda.</p>
+                <p class="text-1xl mt-5 playpensans">Kami merancang dan mengeksekusi kampanye yang didukung oleh analisis mendalam, memastikan setiap investasi pemasaran menghasilkan pengembalian yang optimal bagi bisnis Anda.</p>
             </div>
 
             <!-- Advertising img -->
@@ -103,7 +107,7 @@
         <div class="bg-[#f5f5f5] w-full py-16" id="tentangkami">
             <div class="max-w-[80vw] lg:max-w-[60vw] mx-auto text-center">
                 <h1 class="text-3xl font-bold text-[#0d70fe] playfull">Tentang Kami</h1>
-                <p class="text-1xl mt-5 text-justify">
+                <p class="text-1xl mt-5 text-justify  playpensans">
                     Dunia Advertising mengandalkan konsep dan timdesign, menawarkan bentuk
                     kerja sama dalam hal promotion dan organizer sebagai mitra dalam memberikan
                     solusi bagi anda yang ingin melakukan branding promotion, selling, dan
@@ -119,14 +123,14 @@
             <div class="md:max-w-[60vw] mx-auto mt-[50px] flex md:flex-row flex-col gap-10">
                 <div class="visi w-[80vw] md:w-1/2 mx-auto">
                     <h1 class="text-3xl text-center font-bold text-[#0d70fe] playfull">Visi</h1>
-                    <p class="text-1xl mt-5 text-justify">
+                    <p class="text-1xl mt-5 text-justify  playpensans">
                         Menjadi mitra strategis terdepan bagi merek-merek di Indonesia dalam mewujudkan potensi penuh
                         mereka melalui komunikasi kreatif dan strategis yang berdampak.
                     </p>
                 </div>
                 <div class="misi w-[80vw] md:w-1/2 mx-auto">
                     <h1 class="text-3xl text-center font-bold text-[#0d70fe] playfull">Misi</h1>
-                    <p class="text-1xl mt-5 text-justify">
+                    <p class="text-1xl mt-5 text-justify playpensans">
                         Misi kami adalah menjadi mitra strategis yang mendorong pertumbuhan merek melalui komunikasi kreatif dan strategis.
                         Kami berkomitmen untuk membangun kemitraan erat dengan klien, menghadirkan solusi inovatif berbasis data, dan menciptakan kampanye yang tidak hanya menarik perhatian audiens,
                         tetapi juga menghasilkan dampak bisnis yang terukur.
@@ -140,7 +144,7 @@
         <div class="w-[80vw] md:w-[60vw] text-center my-[50px] w-[75vw]">
             <div class="" id="layanankami">
                 <h1 class="text-3xl font-bold text-[#0d70fe] playfull">Layanan Kami</h1>
-                <p class="text-1xl mt-5 md:text-center text-justify">
+                <p class="text-1xl mt-5 md:text-center text-justify  playpensans">
                     Kami menawarkan berbagai solusi periklanan terintegrasi yang dirancang untuk membantu merek Anda berkembang.
                     Layanan kami fokus pada strategi, kreativitas, dan hasil yang terukur.
                 </p>
@@ -148,28 +152,28 @@
             <div class="flex lg:flex-row flex-col mt-5 p-5 gap-6">
                 <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#143c6f] text-[#e0e2a6] shadow-black-xl/30">
                     <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                    <h4 class="mt-5 text-xl font-semibold">Layanan Produksi</h4>
+                    <h4 class="mt-5 text-xl font-semibold  playpensans">Layanan Produksi</h4>
                     <ol class="mt-5 list-disc list-inside">
-                        <li>Billboard </li>
-                        <li>Videotron</li>
-                        <li>Neon Box</li>
-                        <li>Neon Flex</li>
-                        <li>Cutting Sticker </li>
-                        <li>Letter Sign </li>
-                        <li>Interior Design </li>
-                        <li>Acrylic Frame </li>
-                        <li>Welcome Sign </li>
-                        <li>Signboard </li>
-                        <li>RunningText </li>
-                        <li>Rambu-Rambu </li>
+                        <li class="playpensans">Billboard </li>
+                        <li class="playpensans">Videotron</li>
+                        <li class="playpensans">Neon Box</li>
+                        <li class="playpensans">Neon Flex</li>
+                        <li class="playpensans">Cutting Sticker </li>
+                        <li class="playpensans">Letter Sign </li>
+                        <li class="playpensans">Interior Design </li>
+                        <li class="playpensans">Acrylic Frame </li>
+                        <li class="playpensans">Welcome Sign </li>
+                        <li class="playpensans">Signboard </li>
+                        <li class="playpensans">RunningText </li>
+                        <li class="playpensans">Rambu-Rambu </li>
                     </ol>
                 </div>
                 <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#e0e2a6] text-[#143c6f] shadow-black-xl/30">
                     <i class="fa-solid fa-chart-line fa-xl"></i>
                     <h4 class="mt-5 text-xl font-semibold">Pengembangan Layanan</h4>
                     <ol class="mt-5 list-disc list-inside">
-                        <li>Jasa Perawatan dan Perbaikan</li>
-                        <li>Jasa Pemasangan Spanduk dan Banner</li>
+                        <li class="playpensans">Jasa Perawatan dan Perbaikan</li>
+                        <li class="playpensans">Jasa Pemasangan Spanduk dan Banner</li>
                     </ol>
                 </div>
             </div>
@@ -181,7 +185,7 @@
         <div class="w-full py-16" id="tentangkami">
             <div class="max-w-[80vw] lg:max-w-[60vw] mx-auto text-center">
                 <h1 class="text-3xl font-bold text-[#0d70fe] playfull">Keuntungan Bersama Kami</h1>
-                <p class="text-1xl mt-5 text-center">
+                <p class="text-1xl mt-5 text-center playpensans">
                     Bekerja sama dengan kami berarti mendapatkan lebih dari sekadar layanan advertising.
                     Kami menghadirkan strategi kreatif yang terukur, tim profesional yang berpengalaman, serta dukungan penuh dalam setiap langkah kampanye.
                     Dengan pendekatan yang transparan, inovatif, dan berorientasi hasil, kami memastikan setiap kolaborasi memberikan nilai maksimal bagi pertumbuhan bisnis Anda.
@@ -193,15 +197,15 @@
                 <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4">
                     <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
                         <i class="fa-solid fa-location-dot fa-lg me-4"></i>
-                        <p>Menyediakan layanan survey lokasi GRATIS untuk memastikan media promosi.</p>
+                        <p class="playpensans">Menyediakan layanan survey lokasi GRATIS untuk memastikan media promosi.</p>
                     </div>
                     <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
                         <i class="fa-solid fa-map me-4"></i>
-                        <p>Memberikan denah GRATIS yang menarik dan sesuai kebutuhan brand anda.</p>
+                        <p class="playpensans">Memberikan denah GRATIS yang menarik dan sesuai kebutuhan brand anda.</p>
                     </div>
                     <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
                         <i class="fa-solid fa-building me-4"></i>
-                        <p>Menggunakan material terbaik dan proses produksi yang standar profesional</p>
+                        <p class="playpensans">Menggunakan material terbaik dan proses produksi yang standar profesional</p>
                     </div>
                 </div>
 
@@ -209,15 +213,15 @@
                 <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4">
                     <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
                         <i class="fa-solid fa-screwdriver-wrench me-4"></i>
-                        <p>One Stop Solutions.</p>
+                        <p class="playpensans">One Stop Solutions.</p>
                     </div>
                     <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
                         <i class="fa-solid fa-eye me-4"></i>
-                        <p>Dapat meningkatkan visibilitas dan jangkauan merk.</p>
+                        <p class="playpensans">Dapat meningkatkan visibilitas dan jangkauan merk.</p>
                     </div>
                     <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
                         <i class="fa-solid fa-dollar-sign me-4"></i>
-                        <p>Biaya yang terjangkau dan efektif untuk jangka panjang.</p>
+                        <p class="playpensans">Biaya yang terjangkau dan efektif untuk jangka panjang.</p>
                     </div>
                 </div>
             </div>
@@ -228,43 +232,44 @@
 
         <div class=" text-center mt-[50px] md:max-w-[60vw]" id="produkkami">
             <h1 class="mb-6 text-3xl font-bold text-[#0d70fe] playfull">Produk Kami</h1>
-            <p>Kami percaya bahwa setiap gambar memiliki cerita. Di galeri ini,
+            <p class="playpensans">Kami percaya bahwa setiap gambar memiliki cerita. Di galeri ini,
                 Anda dapat melihat berbagai momen, karya, dan aktivitas yang
                 menjadi bagian dari perjalanan kami dalam dunia advertising.
             </p>
-            <div class="my-8 grid md:grid-cols-3 gap-2 md:grid-cols-1">
+            <div class="mt-8 mb-2 grid md:grid-cols-3 gap-2 md:grid-cols-1">
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/b144.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">Custom Alamat Rumah</div>
+                    <div class="mt-2 playpensans">Custom Alamat Rumah</div>
                 </div>
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/bni.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">Letter Box Stainless</div>
+                    <div class="mt-2 playpensans">Letter Box Stainless</div>
                 </div>
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/teqila.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">SignBoard</div>
+                    <div class="mt-2 playpensans">SignBoard</div>
                 </div>
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/thropy.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">Neon Flex</div>
+                    <div class="mt-2 playpensans">Neon Flex</div>
                 </div>
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/interior.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">Interior Design</div>
+                    <div class="mt-2 playpensans">Interior Design</div>
                 </div>
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/plang.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">Rambu - rambu</div>
+                    <div class="mt-2 playpensans">Rambu - rambu</div>
                 </div>
+            </div>
+            <div class="mb-8 grid md:grid-cols-2 gap-1 grid-cols-1">
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/oisave.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">Neon Box</div>
+                    <div class="mt-2 playpensans">Neon Box</div>
                 </div>
-                <div class=""></div>
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/prod.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
-                    <div class="mt-2">Letter Box Acrylic</div>
+                    <div class="mt-2 playpensans">Letter Box Acrylic</div>
                 </div>
             </div>
         </div>
@@ -274,7 +279,7 @@
 
         <div class=" text-center mt-[50px] md:max-w-[60vw]">
             <h1 class="mb-6 text-3xl font-bold text-[#0d70fe] playfull">Gallery Kami</h1>
-            <div class="my-8 grid md:grid-cols-3 gap-2 md:grid-cols-1">
+            <div class="mt-8 mb-2 grid md:grid-cols-3 gap-2 md:grid-cols-1">
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/pangkas.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
                 </div>
@@ -293,11 +298,12 @@
                 <div class="p-4">
                     <img src="<?= base_url('assets/image/apd.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
                 </div>
-                <div class="p-4">
+            </div>
+            <div class="mb-8 grid md:grid-cols-2 gap-1 grid-cols-1">
+                <div class="p-2">
                     <img src="<?= base_url('assets/image/cllo.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
                 </div>
-                <div class=""></div>
-                <div class="p-4">
+                <div class="p-2">
                     <img src="<?= base_url('assets/image/asg.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
                 </div>
             </div>
@@ -314,15 +320,15 @@
                     <img src="<?= base_url('assets/image/mediapic.png') ?>" alt="" width="500">
                 </div>
                 <div class="md:w-1/2 flex flex-col justify-center items-center">
-                    <p class="text-center">Ikuti perjalanan kami dan dapatkan wawasan terbaru seputar tren periklanan, <br>
+                    <p class="text-center playpensans">Ikuti perjalanan kami dan dapatkan wawasan terbaru seputar tren periklanan, <br>
                         studi kasus, serta cerita di balik layar. <br>
                         Mari terhubung dan bangun komunitas yang kuat bersama kami!
                     </p>
                     <div class="flex place-content-around mt-7 gap-7">
-                        <a href="" class="flex items-center font-bold">
-                            <i class="text-black text-3xl mr-3 fa-brands fa-instagram"></i>dunia.adv
+                        <a href="" class="flex items-center font-bold playpensans">
+                            <i class="text-black text-3xl mr-3 fa-brands fa-instagram  "></i>dunia.adv
                         </a>
-                        <a href="" class="flex items-center font-bold">
+                        <a href="" class="flex items-center font-bold playpensans">
                             <i class="text-black text-3xl mr-3 fa-brands fa-tiktok"></i>duniaadvertising
                         </a>
                     </div>
@@ -333,40 +339,40 @@
         <div class="feedback" id="feedback">
             <div class="w-[80vw] mx-auto">
                 <h1 class="text-center text-3xl my-8 font-bold text-[#0d70fe] playfull">Testimoni Yang Bicara</h1>
-                <p class="md:text-center text-justify">Kami bangga telah menjadi bagian dari kisah sukses berbagai merek. Berikut adalah beberapa testimoni dari klien yang telah bekerja sama dengan kami.
+                <p class="md:text-center text-justify playpensans">Kami bangga telah menjadi bagian dari kisah sukses berbagai merek. Berikut adalah beberapa testimoni dari klien yang telah bekerja sama dengan kami.
                 </p>
             </div>
             <div class="flex flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
                 <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] rounded-xl">
                     <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50" class="text-center">
-                    <p class="mt-3">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
+                    <p class="mt-3 playpensans">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
                         yang kami butuhkan dan hasilnya melampaui ekspektasi. ”
                     </p>
-                    <p class="mt-4 text-center font-bold">JohnDoe</p>
-                    <p class="text-center font-bold">johndoe@gmail.com</p>
+                    <p class="mt-4 text-center font-bold playpensans">JohnDoe</p>
+                    <p class="text-center font-bold playpensans">johndoe@gmail.com</p>
                 </div>
                 <div class="border-2 border-black p-6 w-60 bg-[#e0e2a6] text-[#143c6f]  rounded-xl">
                     <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50">
-                    <p class="mt-3">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
+                    <p class="mt-3 playpensans">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
                         yang kami butuhkan dan hasilnya melampaui ekspektasi. ”
                     </p>
-                    <p class="mt-4 text-center font-bold">JohnDoe</p>
-                    <p class="text-center font-bold">johndoe@gmail.com</p>
+                    <p class="mt-4 text-center font-bold playpensans">JohnDoe</p>
+                    <p class="text-center font-bold playpensans">johndoe@gmail.com</p>
                 </div>
                 <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6]  rounded-xl">
                     <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50">
-                    <p class="mt-3">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
+                    <p class="mt-3 playpensans">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
                         yang kami butuhkan dan hasilnya melampaui ekspektasi. ”
                     </p>
-                    <p class="mt-4 text-center font-bold">JohnDoe</p>
-                    <p class="text-center font-bold">johndoe@gmail.com</p>
+                    <p class="mt-4 text-center font-bold playpensans">JohnDoe</p>
+                    <p class="text-center font-bold playpensans">johndoe@gmail.com</p>
                 </div>
             </div>
             <div class="my-3 w-[80vw] text-center">
-                <p class="md:text-center text-justify">Anda juga bisa membagikan pengalaman Anda bekerja sama dengan kami. <br> Dengan menekan tombol dibawah ini.
+                <p class="md:text-center text-justify playpensans">Anda juga bisa membagikan pengalaman Anda bekerja sama dengan kami. <br> Dengan menekan tombol dibawah ini.
                 </p>
                 <div class="mt-8 mb-12">
-                    <label for="my-modal" class="px-8 py-2 bg-[#143c6f] rounded text-[#e0e2a6] font-bold cursor-pointer">Kirim Pesan</label>
+                    <label for="my-modal" class="px-8 py-2 bg-[#143c6f] rounded text-[#e0e2a6] font-bold cursor-pointer playpensans">Kirim Pesan</label>
                 </div>
             </div>
 
@@ -384,7 +390,7 @@
                     <form action="#" method="POST" class="space-y-5 mt-5">
                         <!-- Nama -->
                         <div>
-                            <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
+                            <label for="nama" class="block text-sm font-medium text-gray-700 mb-1 playpensans">Nama</label>
                             <input type="text" id="nama" name="nama" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                 placeholder="Masukkan nama anda">
@@ -392,7 +398,7 @@
 
                         <!-- Email -->
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1 playpensans">Email</label>
                             <input type="email" id="email" name="email" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                 placeholder="nama@email.com">
@@ -400,7 +406,7 @@
 
                         <!-- Pesan -->
                         <div>
-                            <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1 playpensans">Pesan</label>
                             <textarea type="pesan" id="pesan" name="pesan" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                 placeholder="Pesan Anda">
@@ -409,7 +415,7 @@
 
                         <!-- Tombol -->
                         <button type="submit"
-                            class="w-full py-2.5 px-4 bg-[#143c6f] text-white font-medium rounded-xl shadow hover:bg-[#143c3a] focus:outline-none focus:ring-4 focus:ring-blue-300">
+                            class="w-full py-2.5 px-4 bg-[#143c6f] text-white font-medium rounded-xl shadow hover:bg-[#143c3a] focus:outline-none focus:ring-4 focus:ring-blue-300  playpensans">
                             Kirim Pesan
                         </button>
                     </form>
@@ -427,20 +433,20 @@
         <div class="w-full flex justify-center bg-[#f5f5f5]">
             <div class="hubungikami w-[80vw]" id="hubungikami">
                 <h1 class="text-center text-3xl mt-8 font-bold text-[#0d70fe] playfull">Hubungi Kami</h1>
-                <p class="text-center py-6">Siap untuk membawa merek Anda ke level berikutnya? Hubungi kami sekarang untuk
+                <p class="text-center py-6 playpensans">Siap untuk membawa merek Anda ke level berikutnya? Hubungi kami sekarang untuk
                     berdiskusi <br> tentang bagaimana kami dapat membantu Anda mencapai tujuan bisnis.
                 </p>
                 <div class="flex md:flex-row flex-col">
                     <div class="md:w-1/2 flex flex-col justify-center">
-                        <a href="">
+                        <a href="" class="playpensans">
                             <i class="fa-brands text-2xl fa-whatsapp pe-4 mb-4"></i> +62 851-7688-7162
                         </a>
-                        <a href="">
+                        <a href="" class="playpensans">
                             <i class="fa-solid text-2xl  fa-envelope pe-4 mb-4"></i> advertisingdunia1@gmail.com
                         </a>
                         <div class="">
                             <i class="fa-solid text-2xl  fa-location-dot pe-5"></i>
-                            <a href="">Ruko Bumi Satria Kencana, JL. KH. Noer Ali JL. Raya Kalimalang Blok A-4</a>
+                            <a href="" class="playpensans">Ruko Bumi Satria Kencana, JL. KH. Noer Ali JL. Raya Kalimalang Blok A-4</a>
                         </div>
 
                     </div>
@@ -455,7 +461,7 @@
     <footer class="flex md:flex-row flex-col-reverse justify-between items-center h-fit md:h-[10vh] px-8 py-4">
         <div class="p-2 flex items-center">
             <img src="<?= base_url('assets/image/BMN-logo.png') ?>" alt="" width="50">
-            <span class="text-1xl text-black ps-4">&copy; 2025 - All Right Reserved</span>
+            <span class="text-1xl text-black ps-4 playpensans">&copy; 2025 - All Right Reserved</span>
         </div>
         <div class="p-2">
             <a href="">
