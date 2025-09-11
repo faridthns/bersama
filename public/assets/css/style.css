@@ -69,3 +69,12 @@ html {
     height: 100vh;
     color: white;
 }
+
+.checked {
+    color: orange;
+}
+
+.kirim-btn:disabled, .kirim-btn:hover:disabled {
+    background-color: #5f5f5f;
+    cursor: not-allowed;
+}

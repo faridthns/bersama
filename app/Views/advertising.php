@@ -335,31 +335,16 @@
                 <p class="md:text-center text-justify playpensans">Kami bangga telah menjadi bagian dari kisah sukses berbagai merek. Berikut adalah beberapa testimoni dari klien yang telah bekerja sama dengan kami.
                 </p>
             </div>
-            <div class="flex flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
+            <div class="flex items-stretch flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
+                <?php foreach ($pesan as $p): ?>
                 <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] rounded-xl">
                     <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50" class="text-center">
-                    <p class="mt-3 playpensans">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
-                        yang kami butuhkan dan hasilnya melampaui ekspektasi. ”
+                    <p class="mt-3 playpensans min-h-24">“ <?= esc($p['deskripsi']) ?> ”
                     </p>
-                    <p class="mt-4 text-center font-bold playpensans">JohnDoe</p>
-                    <p class="text-center font-bold playpensans">johndoe@gmail.com</p>
+                    <p class="mt-4 text-center font-bold playpensans"><?= esc($p['nama']) ?></p>
+                    <p class="text-center font-bold playpensans"><?= esc($p['email']) ?></p>
                 </div>
-                <div class="border-2 border-black p-6 w-60 bg-[#e0e2a6] text-[#143c6f]  rounded-xl">
-                    <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50">
-                    <p class="mt-3 playpensans">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
-                        yang kami butuhkan dan hasilnya melampaui ekspektasi. ”
-                    </p>
-                    <p class="mt-4 text-center font-bold playpensans">JohnDoe</p>
-                    <p class="text-center font-bold playpensans">johndoe@gmail.com</p>
-                </div>
-                <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6]  rounded-xl">
-                    <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50">
-                    <p class="mt-3 playpensans">“ Profesional dan kreatif. Mereka benar-benar mengerti apa
-                        yang kami butuhkan dan hasilnya melampaui ekspektasi. ”
-                    </p>
-                    <p class="mt-4 text-center font-bold playpensans">JohnDoe</p>
-                    <p class="text-center font-bold playpensans">johndoe@gmail.com</p>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="my-3 w-[80vw] text-center">
                 <p class="md:text-center text-justify playpensans">Anda juga bisa membagikan pengalaman Anda bekerja sama dengan kami. <br> Dengan menekan tombol dibawah ini.
@@ -375,12 +360,8 @@
             <!-- Modal -->
             <div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center">
                 <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-                    <!-- <h2 class="text-xl font-semibold mb-4">Judul Modal</h2>
-                    <p class="text-gray-600">Ini modal tanpa JavaScript, hanya pakai Tailwind + HTML.</p> -->
-
-                    <!-- <h2 class="text-2xl font-bold mb-6 text-gray-800">Form Kirim Pesan</h2> -->
-
-                    <form action="#" method="POST" class="space-y-5 mt-5">
+                    <form action="<?= base_url('pesan') ?>" method="POST" class="space-y-5 mt-5">
+                        <?= csrf_field() ?>
                         <!-- Nama -->
                         <div>
                             <label for="nama" class="block text-sm font-medium text-gray-700 mb-1 playpensans">Nama</label>
@@ -400,15 +381,25 @@
                         <!-- Pesan -->
                         <div>
                             <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1 playpensans">Pesan</label>
-                            <textarea type="pesan" id="pesan" name="pesan" required
+                            <textarea id="pesan" name="pesan" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                                placeholder="Pesan Anda">
-                            </textarea>
+                                placeholder="Pesan Anda"></textarea>
+                        </div>
+                        <div>
+                            <label for="email" class="form-label">Berikan Ratingmu :</label>
+                            <input type="hidden" name="rating">
+                            <div>
+                                <span class="fa fa-star" id="star-1" onclick="rate(1)"></span>
+                                <span class="fa fa-star" id="star-2" onclick="rate(2)"></span>
+                                <span class="fa fa-star" id="star-3" onclick="rate(3)"></span>
+                                <span class="fa fa-star" id="star-4" onclick="rate(4)"></span>
+                                <span class="fa fa-star" id="star-5" onclick="rate(5)"></span>
+                            </div>
                         </div>
 
                         <!-- Tombol -->
                         <button type="submit"
-                            class="w-full py-2.5 px-4 bg-[#143c6f] text-white font-medium rounded-xl shadow hover:bg-[#143c3a] focus:outline-none focus:ring-4 focus:ring-blue-300  playpensans">
+                            class="kirim-btn w-full py-2.5 px-4 bg-[#143c6f] text-white font-medium rounded-xl shadow hover:bg-[#143c3a] focus:outline-none focus:ring-4 focus:ring-blue-300  playpensans"  id="kirim-btn" disabled>
                             Kirim Pesan
                         </button>
                     </form>
@@ -472,6 +463,73 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 
+    <script>
+        function rate(id)
+        {
+
+            document.getElementsByName("rating")[0].value = id;
+            switch(id){
+            case 1 :
+                checked("star-1");
+                unchecked("star-2");
+                unchecked("star-3");
+                unchecked("star-4");
+                unchecked("star-5");
+                document.getElementById("kirim-btn").disabled = false;
+                break;
+            
+            case 2 :
+                checked("star-1");
+                checked("star-2");
+                unchecked("star-3");
+                unchecked("star-4");
+                unchecked("star-5");
+                document.getElementById("kirim-btn").disabled = false;
+                break;
+
+            case 3 :
+                checked("star-1");
+                checked("star-2");
+                checked("star-3");
+                unchecked("star-4");
+                unchecked("star-5");
+                document.getElementById("kirim-btn").disabled = false;
+                break;
+
+            case 4 :
+                checked("star-1");
+                checked("star-2");
+                checked("star-3");
+                checked("star-4");
+                unchecked("star-5");
+                document.getElementById("kirim-btn").disabled = false;
+                break;
+
+            case 5 :
+                checked("star-1");
+                checked("star-2");
+                checked("star-3");
+                checked("star-4");
+                checked("star-5");
+                document.getElementById("kirim-btn").disabled = false;
+                break;
+            
+                default :
+            }
+        }
+
+        function checked(star_id)
+        {
+            var element = document.getElementById(star_id);
+            element.classList.add("checked");
+        }
+
+        function unchecked(star_id)
+        {
+            var element = document.getElementById(star_id);
+            element.classList.remove("checked");
+        }
+        </script>
 </body>
 
 </html>
