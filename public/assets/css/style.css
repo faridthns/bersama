@@ -8,10 +8,6 @@
     font-family: playfull;
     src: url("../font/Playfull\ Rocket.ttf");
 }
-
-<<<<<<< Updated upstream
-*{
-=======
 @font-face {
     font-family: heavitas;
     src: url("../font/Heavitas.ttf");
@@ -27,9 +23,20 @@
 }
 
 #advertising{
->>>>>>> Stashed changes
     font-family: 'lato', sans-serif;
+}
 
+@font-face {
+    font-family: designer;
+    src: url("../font/Designer.otf");
+}
+
+#advertising{
+    font-family: 'lato', sans-serif;
+}
+
+#contractor {
+    font-family: 'heavitas', sans-serif;
 }
 
 ul > li > a{
@@ -53,7 +60,8 @@ html {
 }
 
 .body-dashboard-main{
-    background-image: url(../image/homebg.jfif);
+    font-family: 'designer', sans-serif;
+    background-image: url(../image/homebg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;

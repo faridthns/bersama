@@ -10,15 +10,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
 </head>
-
-<<<<<<< Updated upstream
-<body>
-=======
 <body id="advertising">
->>>>>>> Stashed changes
     <header>
         <nav class="fixed top-0 w-full bg-white shadow z-50 h-fit flex items-center justify-between px-6 py-2">
             <!-- Logo -->
