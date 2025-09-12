@@ -35,7 +35,7 @@
             </div>
             <div class="contractor text-center border-4 border-red-700 rounded-lg py-6 gap-3 w-[265px]">
                 <h4>Bintara Jaya Persada</h4>
-                <a href="<?= base_url('binatarajayapersada')?>">
+                <a href="<?= base_url('bintarajayapersada')?>">
                     <button class="mt-4 px-4 py-2 bg-red-700 text-white rounded">See Dashboard</button>
                 </a>
             </div>
