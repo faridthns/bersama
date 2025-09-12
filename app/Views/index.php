@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Bintara Jaya Persada</title>
+    <title>Dashboard | Bersama</title>
     <link rel="stylesheet" href="src\output.css">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>">
     <!-- Font Awesome CDN -->
@@ -29,13 +29,13 @@
         <div class="flex justify-center my-12 gap-2">
             <div class="advertising text-center border-4 border-red-700 rounded-lg py-6 w-[265px]">
                 <h4>Dunia Advertising</h4>
-                <a href="<?= base_url('advertising')?>">
+                <a href="<?= base_url('duniaadvertising')?>">
                     <button class="mt-4 px-4 py-2 bg-red-700 text-white rounded">See Dashboard</button>
                 </a>
             </div>
             <div class="contractor text-center border-4 border-red-700 rounded-lg py-6 gap-3 w-[265px]">
                 <h4>Bintara Jaya Persada</h4>
-                <a href="<?= base_url('contractor')?>">
+                <a href="<?= base_url('binatarajayapersada')?>">
                     <button class="mt-4 px-4 py-2 bg-red-700 text-white rounded">See Dashboard</button>
                 </a>
             </div>

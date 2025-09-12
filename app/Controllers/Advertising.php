@@ -27,6 +27,6 @@ class Advertising extends BaseController
         ]);
         
         session()->setFlashdata('pesan', 'Terimakasih telah memberi pesan');
-        return redirect()->to('/advertising');
+        return redirect()->to('/duniaadvertising');
     }
 }

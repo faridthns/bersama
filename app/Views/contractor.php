@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Contractor</title>
+    <title>Dashboard | Binatara Jaya Persada</title>
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/image/lgnav2fix.png')?>">
     <link rel="stylesheet" href="src\output.css">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>">
