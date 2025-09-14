@@ -1,3 +1,24 @@
+<?php
+function formatEmail($email)
+{
+    $parts = explode('@', $email);
+    $username = $parts[0];
+    $domain = '@' . $parts[1];
+
+    $len = strlen($username);
+
+    if ($len <= 7) {
+        // Email pendek → ambil 3 huruf depan
+        $visiblePart = substr($username, 0, 3);
+    } else {
+        // Email panjang → ambil 3 huruf depan
+        $visiblePart = substr($username, 0, 3);
+    }
+
+    return $visiblePart . '****' . $domain;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,7 +109,7 @@
             </div>
             <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1100" class="md:w-1/2 w-full flex items-center justify-center gap-1 p-4">
                 <div class="">
-                    <img src="<?= base_url('assets/image/phone1.png') ?>" alt="phone" width="740" >
+                    <img src="<?= base_url('assets/image/phone1.png') ?>" alt="phone" width="740">
                 </div>
                 <!-- Gambar besar
                 <div class="h-full">
@@ -194,17 +215,51 @@
             </div>
             <div class="flex items-stretch flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
                 <?php foreach ($pesan as $p): ?>
-                    <div class="p-6 rounded-lg text-center md:text-left border-4 w-60 border-[#EEC03E] shadow-2xl">
-                        <!-- <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50" class="text-center"> -->
-                        <i class="fa-solid fa-comments text-center text-3xl"></i>
-                        <p class="mt-3  min-h-24">“ <?= esc($p['deskripsi']) ?> ”
+                    <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] 
+            rounded-xl flex flex-col items-center justify-between">
+
+                        <img src="<?= base_url('assets/image/feedback.png') ?>"
+                            alt="" width="50" class="mx-auto">
+
+                        <p class="mt-3 playpensans min-h-24 text-center">
+                            “ <?= esc($p['deskripsi']) ?> ”
                         </p>
-                        <p class="mt-4 text-center"><?= esc($p['nama']) ?></p>
-                        <p class="text-center"><?= esc($p['email']) ?></p>
+
+                        <!-- <div class=""><?= esc($p['rating']) ?>
+                        <div>
+                                <span class="fa fa-star" id="star-1" onclick="rate(1)"></span>
+                                <span class="fa fa-star" id="star-2" onclick="rate(2)"></span>
+                                <span class="fa fa-star" id="star-3" onclick="rate(3)"></span>
+                                <span class="fa fa-star" id="star-4" onclick="rate(4)"></span>
+                                <span class="fa fa-star" id="star-5" onclick="rate(5)"></span>
+                            </div>
+                        </div> -->
+
+                        <div class="">
+                            <?php $rating = (int)$p['rating']; ?>
+                            <div>
+                                <?php for ($i = 1; $i <= 5; $i++): ?>
+                                    <span class="fa fa-star <?= $i <= $rating ? 'text-yellow-400' : 'text-gray-400' ?>"></span>
+                                <?php endfor; ?>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-center w-full">
+                            <p class="font-bold playpensans"><?= esc($p['nama']) ?></p>
+                            <p class="font-bold playpensans break-all">
+                                <?= formatEmail($p['email']) ?>
+                            </p>
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
             <div class="my-3 w-[80vw] text-center">
+                <div class="mb-4">
+                    <p class="text-lg text-black">
+                        Rating Rata-rata: <?= $averageRating ? number_format($averageRating, 1) : 'Belum ada rating' ?>
+                        / 5  <i class="fas fa-star text-yellow-400"></i>
+                    </p>
+                </div>
                 <p class="text-center md:text-sm text-xs">Anda juga bisa membagikan pengalaman Anda bekerja sama dengan kami. <br> Dengan menekan tombol dibawah ini.
                 </p>
                 <div class="mt-8 mb-12">
@@ -216,9 +271,9 @@
             <input type="checkbox" id="my-modal" class="peer hidden" />
 
             <!-- Modal -->
-            <div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center">
+            <div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center md:pt-20 pt-10">
                 <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-                    <form action="<?= base_url('pesan') ?>" method="POST" class="space-y-5 mt-5">
+                    <form action="<?= base_url('/bintarajayapersada/pesan') ?>" method="POST" class="space-y-5 mt-5">
                         <?= csrf_field() ?>
                         <!-- Nama -->
                         <div>
@@ -315,9 +370,9 @@
                         <i class="fa-solid fa-envelope pe-4 mb-4"></i> bintarajayapersada@yahoo.co.id
                     </a>
                     <h3 class="mb-5 md:text-2xl text-1xl font-bold">Media Sosial</h3>
-                        <a href="" class="md:text-2xl text-xs">
-                            <i class="fa-solid fa-brands fa-instagram  pe-5"></i>@bintarajayapersada99
-                        </a>
+                    <a href="" class="md:text-2xl text-xs">
+                        <i class="fa-solid fa-brands fa-instagram  pe-5"></i>@bintarajayapersada99
+                    </a>
                 </div>
                 <div class="w/1/2 order-1 md:order-2">
                     <img src="<?= base_url('assets/image/hubungikami.png') ?>" alt="" width="500">
@@ -347,6 +402,71 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        function rate(id) {
+
+            document.getElementsByName("rating")[0].value = id;
+            switch (id) {
+                case 1:
+                    checked("star-1");
+                    unchecked("star-2");
+                    unchecked("star-3");
+                    unchecked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
+
+                case 2:
+                    checked("star-1");
+                    checked("star-2");
+                    unchecked("star-3");
+                    unchecked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
+
+                case 3:
+                    checked("star-1");
+                    checked("star-2");
+                    checked("star-3");
+                    unchecked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
+
+                case 4:
+                    checked("star-1");
+                    checked("star-2");
+                    checked("star-3");
+                    checked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
+
+                case 5:
+                    checked("star-1");
+                    checked("star-2");
+                    checked("star-3");
+                    checked("star-4");
+                    checked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
+
+                default:
+            }
+        }
+
+        function checked(star_id) {
+            var element = document.getElementById(star_id);
+            element.classList.add("checked");
+        }
+
+        function unchecked(star_id) {
+            var element = document.getElementById(star_id);
+            element.classList.remove("checked");
+        }
     </script>
 </body>
 
