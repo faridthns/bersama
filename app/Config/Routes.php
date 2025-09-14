@@ -7,5 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home');
 $routes->get('/duniaadvertising', 'Advertising');
-$routes->post('/pesan', 'Advertising::pesan');
+$routes->post('/duniaadvertising/pesan', 'Advertising::pesan');
+$routes->post('/bintarajayapersada/pesan', 'Contractor::pesan');
 $routes->get('/bintarajayapersada', 'Contractor::index');

@@ -1,3 +1,24 @@
+<?php
+function formatEmail($email)
+{
+    $parts = explode('@', $email);
+    $username = $parts[0];
+    $domain = '@' . $parts[1];
+
+    $len = strlen($username);
+
+    if ($len <= 7) {
+        // Email pendek → ambil 3 huruf depan
+        $visiblePart = substr($username, 0, 3);
+    } else {
+        // Email panjang → ambil 3 huruf depan
+        $visiblePart = substr($username, 0, 3);
+    }
+
+    return $visiblePart . '****' . $domain;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +32,7 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body id="advertising">
     <header>
         <nav class="fixed top-0 w-full bg-white shadow z-50 h-fit flex items-center justify-between px-6 py-2">
@@ -337,16 +359,50 @@
             </div>
             <div class="flex items-stretch flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
                 <?php foreach ($pesan as $p): ?>
-                <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] rounded-xl">
+                    <!-- <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] rounded-xl">
                     <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50" class="text-center">
                     <p class="mt-3 playpensans min-h-24">“ <?= esc($p['deskripsi']) ?> ”
                     </p>
                     <p class="mt-4 text-center font-bold playpensans"><?= esc($p['nama']) ?></p>
                     <p class="text-center font-bold playpensans"><?= esc($p['email']) ?></p>
-                </div>
+                </div> -->
+
+                    <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] 
+            rounded-xl flex flex-col items-center justify-between">
+
+                        <img src="<?= base_url('assets/image/feedback.png') ?>"
+                            alt="" width="50" class="mx-auto">
+
+                        <p class="mt-3 playpensans min-h-24 text-center">
+                            “ <?= esc($p['deskripsi']) ?> ”
+                        </p>
+
+                        <div class="">
+                            <?php $rating = (int)$p['rating']; ?>
+                            <div>
+                                <?php for ($i = 1; $i <= 5; $i++): ?>
+                                    <span class="fa fa-star <?= $i <= $rating ? 'text-yellow-400' : 'text-gray-400' ?>"></span>
+                                <?php endfor; ?>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-center w-full">
+                            <p class="font-bold playpensans"><?= esc($p['nama']) ?></p>
+                            <p class="font-bold playpensans break-all">
+                                <?= formatEmail($p['email']) ?>
+                            </p>
+                        </div>
+                    </div>
                 <?php endforeach; ?>
             </div>
             <div class="my-3 w-[80vw] text-center">
+                <div class="mb-4">
+                    <p class="text-lg text-black playpensans">
+                        Rating Rata-rata: <?= $averageRating ? number_format($averageRating, 1) : 'Belum ada rating' ?>
+                        / 5 <i class="fas fa-star text-yellow-400"></i>
+                    </p>
+                </div>
+
                 <p class="md:text-center text-justify playpensans">Anda juga bisa membagikan pengalaman Anda bekerja sama dengan kami. <br> Dengan menekan tombol dibawah ini.
                 </p>
                 <div class="mt-8 mb-12">
@@ -358,9 +414,9 @@
             <input type="checkbox" id="my-modal" class="peer hidden" />
 
             <!-- Modal -->
-            <div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center">
+            <div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center md:pt-20 pt-10">
                 <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-                    <form action="<?= base_url('pesan') ?>" method="POST" class="space-y-5 mt-5">
+                    <form action="<?= base_url('/duniaadvertising/pesan') ?>" method="POST" class="space-y-5 mt-5">
                         <?= csrf_field() ?>
                         <!-- Nama -->
                         <div>
@@ -399,7 +455,7 @@
 
                         <!-- Tombol -->
                         <button type="submit"
-                            class="kirim-btn w-full py-2.5 px-4 bg-[#143c6f] text-white font-medium rounded-xl shadow hover:bg-[#143c3a] focus:outline-none focus:ring-4 focus:ring-blue-300  playpensans"  id="kirim-btn" disabled>
+                            class="kirim-btn w-full py-2.5 px-4 bg-[#143c6f] text-white font-medium rounded-xl shadow hover:bg-[#143c3a] focus:outline-none focus:ring-4 focus:ring-blue-300  playpensans" id="kirim-btn" disabled>
                             Kirim Pesan
                         </button>
                     </form>
@@ -464,72 +520,69 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 
     <script>
-        function rate(id)
-        {
+        function rate(id) {
 
             document.getElementsByName("rating")[0].value = id;
-            switch(id){
-            case 1 :
-                checked("star-1");
-                unchecked("star-2");
-                unchecked("star-3");
-                unchecked("star-4");
-                unchecked("star-5");
-                document.getElementById("kirim-btn").disabled = false;
-                break;
-            
-            case 2 :
-                checked("star-1");
-                checked("star-2");
-                unchecked("star-3");
-                unchecked("star-4");
-                unchecked("star-5");
-                document.getElementById("kirim-btn").disabled = false;
-                break;
+            switch (id) {
+                case 1:
+                    checked("star-1");
+                    unchecked("star-2");
+                    unchecked("star-3");
+                    unchecked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
 
-            case 3 :
-                checked("star-1");
-                checked("star-2");
-                checked("star-3");
-                unchecked("star-4");
-                unchecked("star-5");
-                document.getElementById("kirim-btn").disabled = false;
-                break;
+                case 2:
+                    checked("star-1");
+                    checked("star-2");
+                    unchecked("star-3");
+                    unchecked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
 
-            case 4 :
-                checked("star-1");
-                checked("star-2");
-                checked("star-3");
-                checked("star-4");
-                unchecked("star-5");
-                document.getElementById("kirim-btn").disabled = false;
-                break;
+                case 3:
+                    checked("star-1");
+                    checked("star-2");
+                    checked("star-3");
+                    unchecked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
 
-            case 5 :
-                checked("star-1");
-                checked("star-2");
-                checked("star-3");
-                checked("star-4");
-                checked("star-5");
-                document.getElementById("kirim-btn").disabled = false;
-                break;
-            
-                default :
+                case 4:
+                    checked("star-1");
+                    checked("star-2");
+                    checked("star-3");
+                    checked("star-4");
+                    unchecked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
+
+                case 5:
+                    checked("star-1");
+                    checked("star-2");
+                    checked("star-3");
+                    checked("star-4");
+                    checked("star-5");
+                    document.getElementById("kirim-btn").disabled = false;
+                    break;
+
+                default:
             }
         }
 
-        function checked(star_id)
-        {
+        function checked(star_id) {
             var element = document.getElementById(star_id);
             element.classList.add("checked");
         }
 
-        function unchecked(star_id)
-        {
+        function unchecked(star_id) {
             var element = document.getElementById(star_id);
             element.classList.remove("checked");
         }
-        </script>
+    </script>
 </body>
 
 </html>
