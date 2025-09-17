@@ -36,7 +36,7 @@ function formatEmail($email)
 
 <body id="contractor">
     <header>
-        <nav class="fixed top-0 w-full bg-white shadow z-50 h-[70px] flex items-center justify-between md:px-6 px-10">
+        <nav class="fixed top-0 w-full bg-white shadow z-30 h-[70px] flex items-center justify-between md:px-6 px-10">
             <!-- Logo -->
             <div class="md:ps-8 ps-0 flex items-center">
                 <a href="index.html">
@@ -100,6 +100,18 @@ function formatEmail($email)
     </header>
 
     <section class="flex justify-center items-center flex-col">
+        <?php if (session()->getFlashdata('pesan')): ?>
+            <div class="fixed top-4 left-1/2 transform -translate-x-1/2 mt-5 g-indigo-900 text-center py-4 lg:px-4 z-40">
+                <div class="py-2 px-4 bg-[#198754] items-center text-black leading-none lg:rounded-full flex lg:inline-flex shadow-2xl" role="alert">
+                    <span class="font-semibold mr-2 text-left flex-auto">
+                        <?= session()->getFlashdata('pesan'); ?>
+                    </span>
+                    <button onclick="this.parentElement.parentElement.remove()" class="ml-2 text-indigo-200 hover:text-white">
+                        ✕
+                    </button>
+                </div>
+            </div>
+        <?php endif; ?>
         <div class="top flex items-center mt-[7rem] md:flex-row flex-col justify-center gap-10 w-[80vw]">
             <div class="md:w-1/2 w-full">
                 <h1 class="md:text-5xl text-3xl font-bold text-left mb-6 md:mb-5">Solusi Pengadaan Sipil Terpercaya Untuk Proyek Anda.</h1>
@@ -214,9 +226,8 @@ function formatEmail($email)
                 </p>
             </div>
             <div class="flex items-stretch flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
-                <?php foreach ($pesan as $p): ?>
-                    <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] 
-            rounded-xl flex flex-col items-center justify-between">
+                <?php foreach ($pesan as $index => $p): ?>
+                    <div class="border-2 border-black p-6 w-60 <?= $index % 2 === 0 ? 'bg-[#143c6f] text-[#e0e2a6]' : 'bg-[#e0e2a6] text-[#143c6f]' ?> rounded-xl flex flex-col items-center justify-between">
 
                         <img src="<?= base_url('assets/image/feedback.png') ?>"
                             alt="" width="50" class="mx-auto">
@@ -225,21 +236,11 @@ function formatEmail($email)
                             “ <?= esc($p['deskripsi']) ?> ”
                         </p>
 
-                        <!-- <div class=""><?= esc($p['rating']) ?>
-                        <div>
-                                <span class="fa fa-star" id="star-1" onclick="rate(1)"></span>
-                                <span class="fa fa-star" id="star-2" onclick="rate(2)"></span>
-                                <span class="fa fa-star" id="star-3" onclick="rate(3)"></span>
-                                <span class="fa fa-star" id="star-4" onclick="rate(4)"></span>
-                                <span class="fa fa-star" id="star-5" onclick="rate(5)"></span>
-                            </div>
-                        </div> -->
-
                         <div class="">
                             <?php $rating = (int)$p['rating']; ?>
                             <div>
                                 <?php for ($i = 1; $i <= 5; $i++): ?>
-                                    <span class="fa fa-star <?= $i <= $rating ? 'text-yellow-400' : 'text-gray-400' ?>"></span>
+                                    <span class="fa fa-star <?= $i <= $rating ? ($index % 2 === 0 ? 'text-yellow-400' : 'text-[#143c6f]') : 'text-gray-400' ?>"></span>
                                 <?php endfor; ?>
                             </div>
                         </div>
@@ -257,7 +258,7 @@ function formatEmail($email)
                 <div class="mb-4">
                     <p class="text-lg text-black">
                         Rating Rata-rata: <?= $averageRating ? number_format($averageRating, 1) : 'Belum ada rating' ?>
-                        / 5  <i class="fas fa-star text-yellow-400"></i>
+                        / 5 <i class="fas fa-star text-yellow-400"></i>
                     </p>
                 </div>
                 <p class="text-center md:text-sm text-xs">Anda juga bisa membagikan pengalaman Anda bekerja sama dengan kami. <br> Dengan menekan tombol dibawah ini.

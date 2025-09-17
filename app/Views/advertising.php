@@ -35,7 +35,7 @@ function formatEmail($email)
 
 <body id="advertising">
     <header>
-        <nav class="fixed top-0 w-full bg-white shadow z-50 h-fit flex items-center justify-between px-6 py-2">
+        <nav class="fixed top-0 w-full bg-white shadow z-30 h-fit flex items-center justify-between px-6 py-2">
             <!-- Logo -->
             <div>
                 <img src="<?= base_url('assets/image/BMN-logo.png') ?>" alt="" width="50">
@@ -103,6 +103,18 @@ function formatEmail($email)
 
     <section class="flex justify-center items-center flex-col">
 
+        <?php if (session()->getFlashdata('pesan')): ?>
+            <div class="fixed top-4 left-1/2 transform -translate-x-1/2 mt-5 g-indigo-900 text-center py-4 lg:px-4 z-40">
+                <div class="py-2 px-4 bg-[#198754] items-center text-black leading-none lg:rounded-full flex lg:inline-flex shadow-2xl" role="alert">
+                    <span class="font-semibold mr-2 text-left flex-auto playpensans">
+                        <?= session()->getFlashdata('pesan'); ?>
+                    </span>
+                    <button onclick="this.parentElement.parentElement.remove()" class="ml-2 text-indigo-200 hover:text-white">
+                        ✕
+                    </button>
+                </div>
+            </div>
+        <?php endif; ?>
         <!-- Text Top -->
         <div class="hero mt-[10vh] py-[3rem]">
             <div class="text-center lg:w-[45vw] w-[80vw] mx-auto">
@@ -210,7 +222,7 @@ function formatEmail($email)
             <div class="md:max-w-[60vw] mx-auto mt-[50px] flex md:flex-row flex-col gap-10">
                 <!-- Kolom kiri -->
                 <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4">
-                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
+                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-location-dot fa-lg me-4"></i>
                         <p class="playpensans">Menyediakan layanan survey lokasi GRATIS untuk memastikan media promosi.</p>
                     </div>
@@ -358,7 +370,7 @@ function formatEmail($email)
                 </p>
             </div>
             <div class="flex items-stretch flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
-                <?php foreach ($pesan as $p): ?>
+                <?php foreach ($pesan as $index => $p): ?>
                     <!-- <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] rounded-xl">
                     <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50" class="text-center">
                     <p class="mt-3 playpensans min-h-24">“ <?= esc($p['deskripsi']) ?> ”
@@ -367,21 +379,17 @@ function formatEmail($email)
                     <p class="text-center font-bold playpensans"><?= esc($p['email']) ?></p>
                 </div> -->
 
-                    <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] 
-            rounded-xl flex flex-col items-center justify-between">
-
+                    <div class="border-2 border-black p-6 w-60 <?= $index % 2 === 0 ? 'bg-[#143c6f] text-[#e0e2a6]' : 'bg-[#e0e2a6] text-[#143c6f]' ?> rounded-xl flex flex-col items-center justify-between" id="cardReview" data-index="<?= $index; ?>">
                         <img src="<?= base_url('assets/image/feedback.png') ?>"
                             alt="" width="50" class="mx-auto">
-
                         <p class="mt-3 playpensans min-h-24 text-center">
-                            “ <?= esc($p['deskripsi']) ?> ”
+                            “<?= esc($p['deskripsi']) ?>”
                         </p>
-
                         <div class="">
                             <?php $rating = (int)$p['rating']; ?>
                             <div>
                                 <?php for ($i = 1; $i <= 5; $i++): ?>
-                                    <span class="fa fa-star <?= $i <= $rating ? 'text-yellow-400' : 'text-gray-400' ?>"></span>
+                                    <span class="fa fa-star <?= $i <= $rating ? ($index % 2 === 0 ? 'text-yellow-400' : 'text-[#143c6f]') : 'text-gray-400' ?>"></span>
                                 <?php endfor; ?>
                             </div>
                         </div>
@@ -582,6 +590,8 @@ function formatEmail($email)
             var element = document.getElementById(star_id);
             element.classList.remove("checked");
         }
+
+        document.getElementById('cardReview');
     </script>
 </body>
 
