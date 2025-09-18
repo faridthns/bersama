@@ -1,80 +1,138 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: lato;
-    src: url("../font/Lato-Regular.ttf");
+  font-family: lato;
+  src: url("../font/Lato-Regular.ttf");
 }
 @font-face {
-    font-family: playfull;
-    src: url("../font/Playfull\ Rocket.ttf");
+  font-family: playfull;
+  src: url("../font/Playfull\ Rocket.ttf");
 }
 @font-face {
-    font-family: heavitas;
-    src: url("../font/Heavitas.ttf");
+  font-family: heavitas;
+  src: url("../font/Heavitas.ttf");
 }
 
 @font-face {
-    font-family: designer;
-    src: url("../font/Designer.otf");
+  font-family: designer;
+  src: url("../font/Designer.otf");
 }
 @font-face {
-    font-family: playpensans;
-    src: url("../font/PlaypenSans.ttf");
+  font-family: playpensans;
+  src: url("../font/PlaypenSans.ttf");
 }
 
-#advertising{
-    font-family: 'lato', sans-serif;
+#advertising {
+  font-family: "lato", sans-serif;
 }
 
 @font-face {
-    font-family: designer;
-    src: url("../font/Designer.otf");
+  font-family: designer;
+  src: url("../font/Designer.otf");
 }
 
-#advertising{
-    font-family: 'lato', sans-serif;
+#advertising {
+  font-family: "lato", sans-serif;
 }
 
 #contractor {
-    font-family: 'heavitas', sans-serif;
+  font-family: "heavitas", sans-serif;
 }
 
-ul > li > a{
-    font-family: 'playfull', sans-serif;
+ul > li > a {
+  font-family: "playfull", sans-serif;
 }
 
-.playfull{
-    font-family: 'playfull' , sans-serif;
+.playfull {
+  font-family: "playfull", sans-serif;
 }
 
-.playpensans{
-    font-family: 'playpensans' , sans-serif;
+.playpensans {
+  font-family: "playpensans", sans-serif;
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-.body-dashboard-main{
-    font-family: 'designer', sans-serif;
-    background-image: url(../image/homebg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-    color: white;
+.body-dashboard-main {
+  font-family: "designer", sans-serif;
+  background-image: url(../image/homebg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
 }
 
 .checked {
-    color: orange;
+  color: orange;
 }
 
-.kirim-btn:disabled, .kirim-btn:hover:disabled {
-    background-color: #5f5f5f;
-    cursor: not-allowed;
+.kirim-btn:disabled,
+.kirim-btn:hover:disabled {
+  background-color: #5f5f5f;
+  cursor: not-allowed;
+}
+
+/* Animasi dasar */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Saat terlihat di layar */
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-mob {
+  opacity: 0;
+  transform: translateY(-230px); /* turun dari atas */
+  transition: all 0.3s ease-out;
+}
+
+.nav-mob.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease-out;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease-out;
+}
+
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
 }

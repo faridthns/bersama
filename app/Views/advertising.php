@@ -38,7 +38,7 @@ function formatEmail($email)
         <nav class="fixed top-0 w-full bg-white shadow z-30 h-fit flex items-center justify-between px-6 py-2">
             <!-- Logo -->
             <div>
-                <img src="<?= base_url('assets/image/BMN-logo.png') ?>" alt="" width="50">
+                <img src="<?= base_url('assets/image/BMN-logo.png') ?>" alt="" width="50" loading="lazy">
             </div>
 
             <!-- Desktop Menu -->
@@ -64,7 +64,6 @@ function formatEmail($email)
                     </li>
                 </ul>
             </div>
-
             <!-- Mobile Hamburger -->
             <div class="md:hidden">
                 <!-- Checkbox hack -->
@@ -72,10 +71,9 @@ function formatEmail($email)
                 <label for="menu-toggle" class="cursor-pointer text-3xl select-none">
                     ☰
                 </label>
-
                 <!-- Mobile Menu -->
                 <div
-                    class="absolute top-[10vh] left-0 w-full bg-white shadow-md hidden peer-checked:block">
+                    class="nav-mob absolute top-[12vh] left-0 w-full bg-white shadow-md hidden peer-checked:block">
                     <ul class="flex flex-col items-center gap-4 py-6 text-lg text-black">
                         <li>
                             <a href="#tentangkami" class="hover:text-[#0d70fe]">Tentang Kami</a>
@@ -125,7 +123,7 @@ function formatEmail($email)
 
             <!-- Advertising img -->
             <div class="mt-10 flex justify-center">
-                <img class="border-2 border-black rounded-lg w-[75vw] h-[28vw] object-cover" src="<?= base_url('assets/image/headerimgadvertising.jpg') ?>" alt="">
+                <img class="border-2 border-black rounded-lg w-[75vw] h-[28vw] object-cover zoom-in" src="<?= base_url('assets/image/headerimgadvertising.webp') ?>" alt="" loading="lazy">
             </div>
         </div>
 
@@ -177,7 +175,7 @@ function formatEmail($email)
                 </p>
             </div>
             <div class="flex lg:flex-row flex-col mt-5 p-5 gap-6">
-                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#143c6f] text-[#e0e2a6] shadow-black-xl/30">
+                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#143c6f] text-[#e0e2a6] shadow-black-xl/30 fade-up">
                     <i class="fa-solid fa-pen-to-square fa-xl"></i>
                     <h4 class="mt-5 text-xl font-semibold  playpensans">Layanan Produksi</h4>
                     <ol class="mt-5 list-disc list-inside">
@@ -195,7 +193,7 @@ function formatEmail($email)
                         <li class="playpensans">Rambu-Rambu </li>
                     </ol>
                 </div>
-                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#e0e2a6] text-[#143c6f] shadow-black-xl/30">
+                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#e0e2a6] text-[#143c6f] shadow-black-xl/30 fade-up">
                     <i class="fa-solid fa-chart-line fa-xl"></i>
                     <h4 class="mt-5 text-xl font-semibold">Pengembangan Layanan</h4>
                     <ol class="mt-5 list-disc list-inside">
@@ -219,18 +217,18 @@ function formatEmail($email)
                 </p>
             </div>
 
-            <div class="md:max-w-[60vw] mx-auto mt-[50px] flex md:flex-row flex-col gap-10">
+            <div class="md:max-w-[60vw] mx-auto mt-[50px] flex md:flex-row flex-col gap-x-10 gap-y-4">
                 <!-- Kolom kiri -->
                 <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4">
-                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl md:h-[100px] border-black border-4">
+                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-location-dot fa-lg me-4"></i>
                         <p class="playpensans">Menyediakan layanan survey lokasi GRATIS untuk memastikan media promosi.</p>
                     </div>
-                    <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
+                    <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-map me-4"></i>
                         <p class="playpensans">Memberikan denah GRATIS yang menarik dan sesuai kebutuhan brand anda.</p>
                     </div>
-                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
+                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-building me-4"></i>
                         <p class="playpensans">Menggunakan material terbaik dan proses produksi yang standar profesional</p>
                     </div>
@@ -238,15 +236,15 @@ function formatEmail($email)
 
                 <!-- Kolom kanan -->
                 <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4">
-                    <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
+                    <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-screwdriver-wrench me-4"></i>
                         <p class="playpensans">One Stop Solutions.</p>
                     </div>
-                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
+                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-eye me-4"></i>
                         <p class="playpensans">Dapat meningkatkan visibilitas dan jangkauan merk.</p>
                     </div>
-                    <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-[375px] h-[100px] border-black border-4">
+                    <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-dollar-sign me-4"></i>
                         <p class="playpensans">Biaya yang terjangkau dan efektif untuk jangka panjang.</p>
                     </div>
@@ -265,37 +263,37 @@ function formatEmail($email)
             </p>
             <div class="mt-8 mb-2 grid md:grid-cols-3 gap-2 md:grid-cols-1">
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/b144.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/b144.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Custom Alamat Rumah</div>
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/bni.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/bni.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Letter Box Stainless</div>
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/teqila.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/teqila.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">SignBoard</div>
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/thropy.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/thropy.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Neon Flex</div>
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/interior.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/interior.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Interior Design</div>
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/plang.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/plang.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Rambu - rambu</div>
                 </div>
             </div>
             <div class="mb-8 grid md:grid-cols-2 gap-1 grid-cols-1">
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/oisave.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/oisave.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Neon Box</div>
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/prod.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/prod.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Letter Box Acrylic</div>
                 </div>
             </div>
@@ -308,30 +306,30 @@ function formatEmail($email)
             <h1 class="mb-6 text-3xl font-bold text-[#0d70fe] playfull">Gallery Kami</h1>
             <div class="mt-8 mb-2 grid md:grid-cols-3 gap-2 md:grid-cols-1">
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/pangkas.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/pangkas.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/jack.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/jack.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/patriot.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/patriot.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/jok.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/jok.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/menteri.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/menteri.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
                 <div class="p-4">
-                    <img src="<?= base_url('assets/image/apd.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/apd.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
             </div>
             <div class="mb-8 grid md:grid-cols-2 gap-1 grid-cols-1">
                 <div class="p-2">
-                    <img src="<?= base_url('assets/image/cllo.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/cllo.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
                 <div class="p-2">
-                    <img src="<?= base_url('assets/image/asg.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover">
+                    <img src="<?= base_url('assets/image/asg.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
             </div>
         </div>
@@ -344,7 +342,7 @@ function formatEmail($email)
             <h1 class="text-3xl mb-2 text-center font-bold text-[#0d70fe] playfull">Media Sosial</h1>
             <div class="flex md:flex-row flex-col">
                 <div class="md:w-1/2">
-                    <img src="<?= base_url('assets/image/mediapic.png') ?>" alt="" width="500">
+                    <img src="<?= base_url('assets/image/mediapic.webp') ?>" alt="" width="500">
                 </div>
                 <div class="md:w-1/2 flex flex-col justify-center items-center">
                     <p class="text-center playpensans">Ikuti perjalanan kami dan dapatkan wawasan terbaru seputar tren periklanan, <br>
@@ -499,7 +497,7 @@ function formatEmail($email)
 
                     </div>
                     <div class="md:w-1/2">
-                        <img src="<?= base_url('assets/image/hubungikami.png') ?>" alt="" width="500">
+                        <img src="<?= base_url('assets/image/hubungikami.webp') ?>" alt="" width="500">
                     </div>
                 </div>
             </div>
@@ -529,7 +527,6 @@ function formatEmail($email)
 
     <script>
         function rate(id) {
-
             document.getElementsByName("rating")[0].value = id;
             switch (id) {
                 case 1:
@@ -540,7 +537,6 @@ function formatEmail($email)
                     unchecked("star-5");
                     document.getElementById("kirim-btn").disabled = false;
                     break;
-
                 case 2:
                     checked("star-1");
                     checked("star-2");
@@ -549,7 +545,6 @@ function formatEmail($email)
                     unchecked("star-5");
                     document.getElementById("kirim-btn").disabled = false;
                     break;
-
                 case 3:
                     checked("star-1");
                     checked("star-2");
@@ -558,7 +553,6 @@ function formatEmail($email)
                     unchecked("star-5");
                     document.getElementById("kirim-btn").disabled = false;
                     break;
-
                 case 4:
                     checked("star-1");
                     checked("star-2");
@@ -567,7 +561,6 @@ function formatEmail($email)
                     unchecked("star-5");
                     document.getElementById("kirim-btn").disabled = false;
                     break;
-
                 case 5:
                     checked("star-1");
                     checked("star-2");
@@ -576,7 +569,6 @@ function formatEmail($email)
                     checked("star-5");
                     document.getElementById("kirim-btn").disabled = false;
                     break;
-
                 default:
             }
         }
@@ -590,8 +582,22 @@ function formatEmail($email)
             var element = document.getElementById(star_id);
             element.classList.remove("checked");
         }
-
         document.getElementById('cardReview');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show'); // Tambah class saat elemen masuk layar
+                } else {
+                    entry.target.classList.remove('show'); // Hapus class saat elemen keluar layar
+                }
+            });
+        }, {
+            threshold: 0.1
+        }); // elemen dianggap terlihat kalau 10% muncul
+
+        document.querySelectorAll('.fade-up, .nav-mob, .fade-left, .fade-right, .zoom-in')
+            .forEach(el => observer.observe(el));
     </script>
 </body>
 
