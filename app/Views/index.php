@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Bersama</title>
-    <link rel="stylesheet" href="src\output.css">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Bersama</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="body-dashboard-main">
-    <header>
-        <nav class="navbar-container h-[10vh] flex items-center">
-            <div class="">
-                <a href="index.html">
-                    <h1 class="bmn ps-8 text-black text-3xl">B<span class="text-red-700">M</span>N</h1>
-                </a>
-            </div>
-        </nav>
-    </header>
+<body class="body-dashboard-main min-h-screen flex flex-col items-center justify-between text-white font-sans">
 
-    <section class="flex justify-center flex-col items-center h-[80vh]">
-        <div class="pt-8 text-center">
-            <h1 class="text-3xl text-[#0096FF]">Lorem ipsum dolor sit amet</h1>
-            <h3 class="pt-3 text-[#FFE607]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, doloribus.</h1>
-        </div>
-        <div class="flex justify-center my-12 gap-2">
-            <div class="advertising text-center border-4 border-red-700 rounded-lg py-6 w-[265px]">
-                <h4>Dunia Advertising</h4>
-                <a href="<?= base_url('duniaadvertising')?>">
-                    <button class="mt-4 px-4 py-2 bg-red-700 text-white rounded">See Dashboard</button>
-                </a>
-            </div>
-            <div class="contractor text-center border-4 border-red-700 rounded-lg py-6 gap-3 w-[265px]">
-                <h4>Bintara Jaya Persada</h4>
-                <a href="<?= base_url('bintarajayapersada')?>">
-                    <button class="mt-4 px-4 py-2 bg-red-700 text-white rounded">See Dashboard</button>
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- Header -->
+  <header class="w-full flex items-center justify-start p-6">
+    <img src="assets/image/logo_white.png" alt="Logo Bersama" class="w-10 h-10 mr-2">
+    <h1 class="text-xl font-bold">BERSAMA</h1>
+  </header>
 
-    <footer class="flex items-center grid grid-cols-2 bg-gray-800 h-[10vh]">
-        <div class="p-2 flex items-center">
-            <h1 class="bmn ps-8 text-white text-3xl">B<span class="text-red-700">M</span>N </h1>
-            <span class="text-1xl text-white ps-3">| &copy; Beda Multi Niaga 2025</span>
-        </div>
-        <div class="p-2 justify-self-end">
-            <i class="text-white text-1xl mr-3 fa-brands fa-instagram"></i>
-            <i class="text-white text-1xl mr-3 fa-brands fa-youtube"></i>
-            <i class="text-white text-1xl mr-3 fa-brands fa-linkedin-in"></i>
-            <i class="text-white text-1xl mr-3 fa-brands fa-facebook-f"></i>
-        </div>
-    </footer>
+  <!-- Main Content -->
+  <main class="flex-1 flex flex-col items-center justify-center px-6 text-center">
+    <h1 class="text-3xl font-bold mb-2">Selamat Datang</h1>
+    <p class="text-sm mb-8 max-w-md">
+        Dashboard Bersama, satu langkah menuju produktivitas lebih baik.
+    </p>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Cards -->
+    <div class="flex flex-col md:flex-row gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white/20 rounded-lg shadow-lg px-6 py-6 text-center w-64">
+        <!-- Logo Lingkaran -->
+        <div class="flex justify-center mb-4">
+          <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+            <img src="assets/image/BMN-logo.png" alt="Logo Dunia Advertising" class="w-12 h-12">
+          </div>
+        </div>
+        <h2 class="font-bold text-white text-lg">Dunia Advertising</h2>
+        <a href="<?= base_url('/bintarajayapersada')?>">
+          <button class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-semibold">
+            See Dashboard
+          </button>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white/20 rounded-lg shadow-lg px-6 py-6 text-center w-64">
+        <!-- Logo Lingkaran -->
+        <div class="flex justify-center mb-4">
+          <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+            <img src="assets/image/lgnav2fix.png" alt="Logo Bintara Jaya Persada" class="w-12 h-12">
+          </div>
+        </div>
+        <h2 class="font-bold text-white text-lg">Bintara Jaya Persada</h2>
+        <a href="<?= base_url('/bintarajayapersada')?>">
+          <button class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-semibold">
+            See Dashboard
+          </button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-white/10 py-4 flex items-center justify-between px-6 text-sm">
+    <span>&copy; Bersama 2025</span>
+    <div class="flex gap-4">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
 </body>
 </html>
