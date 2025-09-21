@@ -136,3 +136,8 @@ html {
   opacity: 1;
   transform: scale(1);
 }
+
+.hero {
+  background-image: url(../image/wave-haikei.svg);
+  background-size: contain;
+}

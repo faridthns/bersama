@@ -69,7 +69,7 @@ function formatEmail($email)
                 </label>
                 <!-- Mobile Menu -->
                 <div
-                    class="absolute nav-mob  top-[10vh] left-0 w-full bg-white mt-5 shadow-md hidden peer-checked:block">
+                    class="absolute nav-mob top-[3em] left-0 w-full bg-white mt-5 shadow-md hidden peer-checked:block">
                     <ul class="flex flex-col items-center md:gap-4 gap-2 py-6 text-lg text-black">
                         <li>
                             <a href="<?= base_url('/') ?>" class="hover:text-red-700">Home</a>
@@ -122,12 +122,12 @@ function formatEmail($email)
                 <h1 class="md:text-3xl text-2xl text-center mb-5 font-bold">Layanan Kami</h1>
             </div>
             <div class="flex gap-4 md:flex-row flex-col pt-8">
-                <div class="">
+                <div class="fade-up">
                     <img src="<?= base_url('assets/image/Icon.svg') ?>" alt="icon" class="mx-auto" loading="lazy">
                     <h2 class="text-center md:text-2xl text-1xl font-bold mb-5 mt-4">Kontraktor</h2>
                     <p class="text-center">Kami menyediakan layanan kontraktor untuk proyek-proyek konstruksi, renovasi, dan perawatan bangunan.</p>
                 </div>
-                <div class="">
+                <div class="fade-up">
                     <img src="<?= base_url('assets/image/Icon2.svg') ?>" alt="icon" class="mx-auto" loading="lazy">
                     <h2 class="text-center md:text-2xl text-1xl font-bold mb-5 mt-4">Perdagangan Umum</h2>
                     <p class="text-center">Kami menyediakan berbagai produk dan jasa perdagangan umum, termasuk pengadaan barang dan jasa.</p>
@@ -142,21 +142,21 @@ function formatEmail($email)
                 </p>
             </div>
             <div class="flex place-content-around gap-7 flex-col md:flex-row">
-                <div class="md:text-left text-center border-2 p-5 shadow-2xs rounded-lg border-[#EEC03E] md:w-[20vw] w-[80vw] bg-[#0C2985] text-[#EEC03E] shadow-2xl">
+                <div class="fade-up md:text-left text-center border-2 p-5 shadow-2xs rounded-lg border-[#EEC03E] lg:w-[20vw] md:w-[12rem] w-[80vw] bg-[#0C2985] text-[#EEC03E] shadow-2xl">
                     <i class="fa-solid fa-medal"></i>
                     <h4 class="my-5 font-bold">Pengalaman</h4>
                     <p>
                         Kami memiliki pengalaman yang luas dalam bidang kontraktor dan perdagangan umum.
                     </p>
                 </div>
-                <div class="md:text-left text-center border-2 p-5 shadow-2xs rounded-lg border-[#0C2985] md:w-[20vw] w-[80vw] bg-[#EEC03E] text-[#0C2985] shadow-2xl">
+                <div class="fade-up md:text-left text-center border-2 p-5 shadow-2xs rounded-lg border-[#0C2985] lg:w-[20vw] md:w-[12rem] w-[80vw] bg-[#EEC03E] text-[#0C2985] shadow-2xl">
                     <i class="fa-solid fa-star"></i>
                     <h4 class="my-5 font-bold">Kualitas</h4>
                     <p>
                         Kami berkomitmen untuk memberikan layanan yang berkualitas tinggi dan profesional.
                     </p>
                 </div>
-                <div class="md:text-left text-center border-2 p-5 shadow-2xs rounded-lg border-[#EEC03E] md:w-[20vw] w-[80vw] bg-[#0C2985] text-[#EEC03E] shadow-2xl">
+                <div class="fade-up md:text-left text-center border-2 p-5 shadow-2xs rounded-lg border-[#EEC03E] lg:w-[20vw] md:w-[12rem] w-[80vw] bg-[#0C2985] text-[#EEC03E] shadow-2xl">
                     <i class="fa-solid fa-lightbulb"></i>
                     <h4 class="my-5 font-bold">Inovasi</h4>
                     <p>
@@ -176,7 +176,7 @@ function formatEmail($email)
                 </p>
             </div>
             <div class="flex md:flex-row flex-col w-[80vw] items-center justify-center">
-                <div class="w-[50%]">
+                <div class="w-[50%] fade-left">
                     <img src="<?= base_url('assets/image/phone2.webp') ?>" alt="phone" width="440" loading="lazy">
                 </div>
                 <div class="flex flex-col items-center justify-center md:w-[50%] w-[90%]">
@@ -200,7 +200,7 @@ function formatEmail($email)
             </div>
             <div class="flex items-stretch flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
                 <?php foreach ($pesan as $index => $p): ?>
-                    <div class="border-2 border-black p-6 w-60 <?= $index % 2 === 0 ? 'bg-[#143c6f] text-[#e0e2a6]' : 'bg-[#e0e2a6] text-[#143c6f]' ?> rounded-xl flex flex-col items-center justify-between">
+                    <div class="fade-up border-2 border-black p-6 w-60 <?= $index % 2 === 0 ? 'bg-[#143c6f] text-[#e0e2a6]' : 'bg-[#e0e2a6] text-[#143c6f]' ?> rounded-xl flex flex-col items-center justify-between">
                         <img src="<?= base_url('assets/image/feedback.png') ?>"
                             alt="" width="50" class="mx-auto" loading="lazy">
                         <p class="mt-3 playpensans min-h-24 text-center">
@@ -240,7 +240,7 @@ function formatEmail($email)
             <input type="checkbox" id="my-modal" class="peer hidden" />
             <!-- Modal -->
             <div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center md:pt-20 pt-10">
-                <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+                <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative max-w-[80vw]">
                     <form action="<?= base_url('/bintarajayapersada/pesan') ?>" method="POST" class="space-y-5 mt-5">
                         <?= csrf_field() ?>
                         <!-- Nama -->
@@ -295,18 +295,18 @@ function formatEmail($email)
                 </p>
             </div>
             <div class="flex flex-col gap-[50px] mt-5 mx-auto">
-                <div class="flex mx-auto place-content-center items-center w-[80vw] md:w-[70vw] gap-[50px] md:flex-row flex-col">
-                    <img src="<?= base_url('assets/image/pic4.webp') ?>" alt="galeripic" class="w-[204px] border-4 border-black rounded-xl object-cover" loading="lazy">
-                    <img src="<?= base_url('assets/image/galeri1.webp') ?>" alt="galeripic" class="w-[204px] border-4 border-black rounded-xl object-cover" loading="lazy">
+                <div class="flex mx-auto place-content-center items-center w-[80vw] md:w-[70vw] gap-[50px] flex-row">
+                    <img src="<?= base_url('assets/image/pic4.webp') ?>" alt="galeripic" class="fade-up md:w-[204px] w-32 border-4 border-black rounded-xl object-cover" loading="lazy">
+                    <img src="<?= base_url('assets/image/galeri1.webp') ?>" alt="galeripic" class="fade-up md:w-[204px] w-32 border-4 border-black rounded-xl object-cover" loading="lazy">
                 </div>
-                <div class="flex mx-auto place-content-center items-center w-[80vw] md:w-[70vw] gap-[50px] md:flex-row flex-col">
-                    <img src="<?= base_url('assets/image/galeri2.jpg') ?>" alt="galeripic" class="w-[204px] border-4 border-black rounded-xl object-cover" loading="lazy">
-                    <img src="<?= base_url('assets/image/galeri3.jpg') ?>" alt="galeripic" class="w-[204px] border-4 border-black rounded-xl object-cover" loading="lazy">
-                    <img src="<?= base_url('assets/image/galeri4.jpg') ?>" alt="galeripic" class="w-[204px] border-4 border-black rounded-xl object-cover" loading="lazy">
+                <div class="flex mx-auto place-content-center items-center w-[80vw] md:w-[70vw] md:gap-[50px] gap-[20px] flex-row">
+                    <img src="<?= base_url('assets/image/galeri2.jpg') ?>" alt="galeripic" class="fade-up md:w-[204px] w-24 border-4 border-black rounded-xl object-cover" loading="lazy">
+                    <img src="<?= base_url('assets/image/galeri3.jpg') ?>" alt="galeripic" class="fade-up md:w-[204px] w-24 border-4 border-black rounded-xl object-cover" loading="lazy">
+                    <img src="<?= base_url('assets/image/galeri4.jpg') ?>" alt="galeripic" class="fade-up md:w-[204px] w-24 border-4 border-black rounded-xl object-cover" loading="lazy">
                 </div>
-                <div class="flex mx-auto place-content-center items-center w-[80vw] md:w-[70vw] gap-[50px] md:flex-row flex-col">
-                    <img src="<?= base_url('assets/image/galeri5.jpg') ?>" alt="galeripic" class="w-[204px] border-4 border-black rounded-xl object-cover" loading="lazy">
-                    <img src="<?= base_url('assets/image/galeri6.jpg') ?>" alt="galeripic" class="w-[204px] border-4 border-black rounded-xl object-cover" loading="lazy">
+                <div class="flex mx-auto place-content-center items-center w-[80vw] md:w-[70vw] gap-[50px] flex-row">
+                    <img src="<?= base_url('assets/image/galeri5.jpg') ?>" alt="galeripic" class="fade-up md:w-[204px] w-32 border-4 border-black rounded-xl object-cover" loading="lazy">
+                    <img src="<?= base_url('assets/image/galeri6.jpg') ?>" alt="galeripic" class="fade-up md:w-[204px] w-32 border-4 border-black rounded-xl object-cover" loading="lazy">
                 </div>
             </div>
         </div>
@@ -317,22 +317,22 @@ function formatEmail($email)
                     Jangan ragu untuk menghubungi kami melalui kontak di bawah ini atau ikuti kami di media sosial untuk mendapatkan informasi terbaru seputar layanan dan proyek kami.
                 </p>
             </div>
-            <div class="flex md:flex-row flex-col md:px-20 px-10 gap-10">
-                <div class="md:w-1/2 w-full flex order-2 mb-8 md:mb-0 md:order-1 flex-col justify-center">
+            <div class="flex md:flex-row w-[80vw] flex-col md:py-20 lg:gap-6">
+                <div class="md:w-1/2 w-full flex order-2 my-8 md:mb-0 md:order-1 flex-col justify-center">
                     <h3 class="mb-5 md:text-2xl text-1xl font-bold">Kontak</h3>
-                    <a href="" class="md:text-2xl text-xs">
+                    <a href="" class="lg:text-xl text-xs">
                         <i class="fa-brands fa-whatsapp pe-4 mb-4"></i> +62 851-7688-7162
                     </a>
-                    <a href="" class="md:text-2xl text-xs">
+                    <a href="" class="lg:text-xl text-xs">
                         <i class="fa-solid fa-envelope pe-4 mb-4"></i> bintarajayapersada@yahoo.co.id
                     </a>
-                    <h3 class="mb-5 md:text-2xl text-1xl font-bold">Media Sosial</h3>
-                    <a href="" class="md:text-2xl text-xs">
+                    <h3 class="my-5 md:text-2xl text-1xl font-bold">Media Sosial</h3>
+                    <a href="" class="lg:text-xl text-xs">
                         <i class="fa-solid fa-brands fa-instagram  pe-5"></i>@bintarajayapersada99
                     </a>
                 </div>
-                <div class="w/1/2 order-1 md:order-2">
-                    <img src="<?= base_url('assets/image/hubungikami.webp') ?>" alt="" width="500" loading="lazy">
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <img src="<?= base_url('assets/image/hubungikami.webp') ?>" alt="" class="w-[400px] fade-right" loading="lazy">
                 </div>
             </div>
         </div>

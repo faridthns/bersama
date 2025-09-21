@@ -73,7 +73,7 @@ function formatEmail($email)
                 </label>
                 <!-- Mobile Menu -->
                 <div
-                    class="nav-mob absolute top-[12vh] left-0 w-full bg-white shadow-md hidden peer-checked:block">
+                    class="nav-mob absolute top-[4em] left-0 w-full bg-white shadow-md hidden peer-checked:block">
                     <ul class="flex flex-col items-center gap-4 py-6 text-lg text-black">
                         <li>
                             <a href="#tentangkami" class="hover:text-[#0d70fe]">Tentang Kami</a>
@@ -175,7 +175,7 @@ function formatEmail($email)
                 </p>
             </div>
             <div class="flex lg:flex-row flex-col mt-5 p-5 gap-6">
-                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#143c6f] text-[#e0e2a6] shadow-black-xl/30 fade-up">
+                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit bg-[#143c6f] text-[#e0e2a6] shadow-black-xl/30 fade-up">
                     <i class="fa-solid fa-pen-to-square fa-xl"></i>
                     <h4 class="mt-5 text-xl font-semibold  playpensans">Layanan Produksi</h4>
                     <ol class="mt-5 list-disc list-inside">
@@ -193,7 +193,7 @@ function formatEmail($email)
                         <li class="playpensans">Rambu-Rambu </li>
                     </ol>
                 </div>
-                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit md:w-1/3 bg-[#e0e2a6] text-[#143c6f] shadow-black-xl/30 fade-up">
+                <div class="text-left border-2 rounded-md p-5 border-black h-fit mx-auto w-fit bg-[#e0e2a6] text-[#143c6f] shadow-black-xl/30 fade-up">
                     <i class="fa-solid fa-chart-line fa-xl"></i>
                     <h4 class="mt-5 text-xl font-semibold">Pengembangan Layanan</h4>
                     <ol class="mt-5 list-disc list-inside">
@@ -217,10 +217,10 @@ function formatEmail($email)
                 </p>
             </div>
 
-            <div class="md:max-w-[60vw] mx-auto mt-[50px] flex md:flex-row flex-col gap-x-10 gap-y-4">
+            <div class="lg:max-w-[60vw] max-w-[80vw] mx-auto mt-[50px] flex md:flex-row flex-col gap-x-10 gap-y-4">
                 <!-- Kolom kiri -->
-                <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4">
-                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
+                <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4 fade-left">
+                    <div class="flex items-center bg-[#143c6f] text-[#e0e2a6] p-6 pe-0 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-location-dot fa-lg me-4"></i>
                         <p class="playpensans">Menyediakan layanan survey lokasi GRATIS untuk memastikan media promosi.</p>
                     </div>
@@ -235,7 +235,7 @@ function formatEmail($email)
                 </div>
 
                 <!-- Kolom kanan -->
-                <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4">
+                <div class="misi w-[80vw] md:w-1/2 mx-auto flex items-center flex-col gap-4 fade-right">
                     <div class="flex items-center bg-[#e0e2a6] text-[#143c6f] p-6 rounded-xl w-full md:h-[100px] border-black border-4">
                         <i class="fa-solid fa-screwdriver-wrench me-4"></i>
                         <p class="playpensans">One Stop Solutions.</p>
@@ -255,45 +255,45 @@ function formatEmail($email)
 
         <!-- Produk Kami -->
 
-        <div class=" text-center mt-[50px] md:max-w-[60vw]" id="produkkami">
+        <div class=" text-center mt-[50px] lg:max-w-[60vw] max-w-[80vw]" id="produkkami">
             <h1 class="mb-6 text-3xl font-bold text-[#0d70fe] playfull">Produk Kami</h1>
             <p class="playpensans">Kami percaya bahwa setiap gambar memiliki cerita. Di galeri ini,
                 Anda dapat melihat berbagai momen, karya, dan aktivitas yang
                 menjadi bagian dari perjalanan kami dalam dunia advertising.
             </p>
-            <div class="mt-8 mb-2 grid md:grid-cols-3 gap-2 md:grid-cols-1">
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/b144.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+            <div class="mt-8 mb-2 grid md:grid-cols-3 md:gap-2 grid-cols-2">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/b144.webp') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Custom Alamat Rumah</div>
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/bni.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/bni.webp') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Letter Box Stainless</div>
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/teqila.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/teqila.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">SignBoard</div>
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/thropy.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/thropy.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Neon Flex</div>
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/interior.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/interior.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Interior Design</div>
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/plang.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/plang.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Rambu - rambu</div>
                 </div>
             </div>
-            <div class="mb-8 grid md:grid-cols-2 gap-1 grid-cols-1">
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/oisave.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+            <div class="mb-8 grid md:grid-cols-2 gap-1 grid-cols-2">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/oisave.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Neon Box</div>
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/prod.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/prod.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                     <div class="mt-2 playpensans">Letter Box Acrylic</div>
                 </div>
             </div>
@@ -302,34 +302,34 @@ function formatEmail($email)
 
         <!-- Gallery Kami -->
 
-        <div class=" text-center mt-[50px] md:max-w-[60vw]">
+        <div class=" text-center mt-[50px] lg:max-w-[60vw] max-w-[80vw]">
             <h1 class="mb-6 text-3xl font-bold text-[#0d70fe] playfull">Gallery Kami</h1>
-            <div class="mt-8 mb-2 grid md:grid-cols-3 gap-2 md:grid-cols-1">
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/pangkas.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+            <div class="mt-8 mb-2 grid md:grid-cols-3 gap-2 grid-cols-2">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/pangkas.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/jack.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/jack.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/patriot.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/patriot.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/jok.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/jok.webp') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/menteri.jpg') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/menteri.jpg') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
-                <div class="p-4">
-                    <img src="<?= base_url('assets/image/apd.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-4 fade-up">
+                    <img src="<?= base_url('assets/image/apd.webp') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
             </div>
-            <div class="mb-8 grid md:grid-cols-2 gap-1 grid-cols-1">
-                <div class="p-2">
-                    <img src="<?= base_url('assets/image/cllo.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+            <div class="mb-8 grid grid-cols-2 gap-1">
+                <div class="p-2 fade-up">
+                    <img src="<?= base_url('assets/image/cllo.webp') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
-                <div class="p-2">
-                    <img src="<?= base_url('assets/image/asg.webp') ?>" alt="" class="rounded-xl border-black border-4 h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
+                <div class="p-2 fade-up">
+                    <img src="<?= base_url('assets/image/asg.webp') ?>" alt="" class="rounded-xl border-black border-4 md:h-[300px] mx-auto w-60 h-40 object-cover" loading="lazy">
                 </div>
             </div>
         </div>
@@ -345,7 +345,7 @@ function formatEmail($email)
                     <img src="<?= base_url('assets/image/mediapic.webp') ?>" alt="" width="500">
                 </div>
                 <div class="md:w-1/2 flex flex-col justify-center items-center">
-                    <p class="text-center playpensans">Ikuti perjalanan kami dan dapatkan wawasan terbaru seputar tren periklanan, <br>
+                    <p class="md:text-center playpensans">Ikuti perjalanan kami dan dapatkan wawasan terbaru seputar tren periklanan, <br>
                         studi kasus, serta cerita di balik layar. <br>
                         Mari terhubung dan bangun komunitas yang kuat bersama kami!
                     </p>
@@ -369,15 +369,7 @@ function formatEmail($email)
             </div>
             <div class="flex items-stretch flex-wrap gap-4 w-[80vw] gap-4 justify-center mt-5 p-5 mx-auto">
                 <?php foreach ($pesan as $index => $p): ?>
-                    <!-- <div class="border-2 border-black p-6 w-60 bg-[#143c6f] text-[#e0e2a6] rounded-xl">
-                    <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" width="50" class="text-center">
-                    <p class="mt-3 playpensans min-h-24">“ <?= esc($p['deskripsi']) ?> ”
-                    </p>
-                    <p class="mt-4 text-center font-bold playpensans"><?= esc($p['nama']) ?></p>
-                    <p class="text-center font-bold playpensans"><?= esc($p['email']) ?></p>
-                </div> -->
-
-                    <div class="border-2 border-black p-6 w-60 <?= $index % 2 === 0 ? 'bg-[#143c6f] text-[#e0e2a6]' : 'bg-[#e0e2a6] text-[#143c6f]' ?> rounded-xl flex flex-col items-center justify-between" id="cardReview" data-index="<?= $index; ?>">
+                    <div class="fade-up w-1/2 md:w-1/3 border-2 border-black p-6 w-60 <?= $index % 2 === 0 ? 'bg-[#143c6f] text-[#e0e2a6]' : 'bg-[#e0e2a6] text-[#143c6f]' ?> rounded-xl flex flex-col items-center justify-between" id="cardReview" data-index="<?= $index; ?>">
                         <img src="<?= base_url('assets/image/feedback.png') ?>"
                             alt="" width="50" class="mx-auto">
                         <p class="mt-3 playpensans min-h-24 text-center">
@@ -391,7 +383,6 @@ function formatEmail($email)
                                 <?php endfor; ?>
                             </div>
                         </div>
-
                         <div class="mt-4 text-center w-full">
                             <p class="font-bold playpensans"><?= esc($p['nama']) ?></p>
                             <p class="font-bold playpensans break-all">
@@ -421,7 +412,7 @@ function formatEmail($email)
 
             <!-- Modal -->
             <div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center md:pt-20 pt-10">
-                <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+                <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative  max-w-[80vw]">
                     <form action="<?= base_url('/duniaadvertising/pesan') ?>" method="POST" class="space-y-5 mt-5">
                         <?= csrf_field() ?>
                         <!-- Nama -->
